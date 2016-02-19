@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Photo extends Activity implements OnClickListener{
+
 	
 private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
 public static final int MEDIA_TYPE_IMAGE = 1;
@@ -33,6 +34,8 @@ public void onCreate(Bundle savedInstanceState) {
 	
 	//start the image capture Intent
 	startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+	
+	
 }
 
 @Override
@@ -50,6 +53,10 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		}
 	}
 }
+
+	//code for analyzing photo should go here or in another activity
+	//if in another activity I need to send the file name to that activity so it can load the picture
+
 
 	public void onClick(View view) {
 		Intent intent =

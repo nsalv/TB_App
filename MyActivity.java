@@ -10,23 +10,29 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 
 public class MyActivity extends Activity implements OnClickListener {
+	//generates two buttons; one for the photo activity and one for the directions
 	Button button1, button2;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//sets the layout of the activity
 		setContentView(R.layout.activity_my);
 		
+		//these lines tell the app to look for clicks on the buttons in the activity
 		((Button) findViewById(R.id.button1)).setOnClickListener(this);
 		((Button) findViewById(R.id.button2)).setOnClickListener(this);
 		
 	}
-	
+	//function that if 'get started' button is clicked, go to photo activity
 	public void onClick(View view){
 		Intent intent =
 				new Intent(MyActivity.this, Photo.class);
 		startActivity(intent);
 	}
+	//function that if 'directions button is clicked go to direction activity
 	public void onButtonClick(View view){
+		//not too clear on exactly how intents work but I know you need to initialize intents in order 
+		//to start a new activity
 		Intent intent1 =
 				new Intent(MyActivity.this, DirectionsActivity.class);
 		startActivity(intent1);
