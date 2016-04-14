@@ -18,25 +18,24 @@ public class MyActivity extends Activity implements OnClickListener {
 		//sets the layout of the activity
 		setContentView(R.layout.activity_my);
 		
-		//these lines tell the app to look for clicks on the buttons in the activity
-		((Button) findViewById(R.id.button1)).setOnClickListener(this);
-		((Button) findViewById(R.id.button2)).setOnClickListener(this);
-		
+		button1 = (Button)findViewById(R.id.button1);
+		button2 = (Button)findViewById(R.id.button2);
 	}
 	//function that if 'get started' button is clicked, go to photo activity
 	public void onClick(View view){
+		
+		if(view.getId() == R.id.button1){
 		Intent intent =
 				new Intent(MyActivity.this, Photo.class);
 		startActivity(intent);
+		}
+		else if(view.getId() == R.id.button2){
+			Intent intent1 = 
+					new Intent(MyActivity.this, DirectionsActivity.class);
+			startActivity(intent1);
+		}
 	}
-	//function that if 'directions button is clicked go to direction activity
-	public void onButtonClick(View view){
-		//not too clear on exactly how intents work but I know you need to initialize intents in order 
-		//to start a new activity
-		Intent intent1 =
-				new Intent(MyActivity.this, DirectionsActivity.class);
-		startActivity(intent1);
-	}
+
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
