@@ -100,9 +100,9 @@ public class Photo extends Activity implements OnClickListener{
 		                //scoring needs to be amended such that it registers as either 0 or 1
 		                //waiting on reference strip from Sharon in order to grab pixel values
 		                
-						if (red < 115 && red > 95){
-							if (green < 75 && green > 55){
-								if (blue < 35 && blue > 25){
+						if (red < 141 && red > 125){
+							if (green < 105 && green > 85){
+								if (blue < 50 && blue > 35){
 									tempScore = 5;
 									if(tempScore > maxScore){
 					                	maxScore = tempScore;
@@ -110,9 +110,9 @@ public class Photo extends Activity implements OnClickListener{
 					                }
 								}
 							}
-						} else if (red < 125 && red >= 115){
-							if (green < 100 && green >= 75){
-								if (blue < 43 && blue >= 35){
+						} else if (red < 157 && red >= 141){
+							if (green < 123 && green >= 105){
+								if (blue < 67 && blue >= 50){
 									tempScore = 4;
 									if(tempScore > maxScore){
 					                	maxScore = tempScore;
@@ -120,9 +120,9 @@ public class Photo extends Activity implements OnClickListener{
 					                }
 								}
 							}
-						} else if (red < 141 && red >= 125){
-							if (green < 118 && green >= 100){
-								if (blue < 56 && blue >= 43){
+						} else if (red < 162 && red >= 157){
+							if (green < 134 && green >= 123){
+								if (blue < 76 && blue >= 67){
 									tempScore = 3;
 									if(tempScore > maxScore){
 					                	maxScore = tempScore;
@@ -130,9 +130,9 @@ public class Photo extends Activity implements OnClickListener{
 					                }
 								}
 							}
-						} else if (red < 152 && red >= 141){
-							if (green < 131 && green >= 118){
-								if (blue < 70 && blue >= 56){
+						} else if (red < 168 && red >= 162){
+							if (green < 141 && green >= 134){
+								if (blue < 79 && blue >= 76){
 									tempScore = 2;
 									if(tempScore > maxScore){
 					                	maxScore = tempScore;
@@ -140,9 +140,9 @@ public class Photo extends Activity implements OnClickListener{
 					                }
 								}
 							}
-						} else if (red < 175 && red >= 152){
-							if (green < 155 && green >= 131){
-								if (blue < 80 && blue >= 70){
+						} else if (red < 180 && red >= 168){
+							if (green < 150 && green >= 141){
+								if (blue < 85 && blue >= 79){
 									tempScore = 1;
 									if(tempScore > maxScore){
 					                	maxScore = tempScore;
